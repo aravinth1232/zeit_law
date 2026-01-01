@@ -1,0 +1,143 @@
+
+
+html,body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+
+.bo{
+  border: 2px solid black;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-out, color 9999s ease-out;
+  transition-delay: 9999s;
+}
+
+
+/*------------------- hero section starts -------------------------*/
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up-heading {
+   
+  opacity: 0;
+  animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+.delay-5 { animation-delay: 0.70s; }
+
+
+
+
+
+/*-------------------- hero section ends------------------------- */
+
+
+/*------------------------ why choose us section starts -------------------------*/
+
+/* underline effect starts */
+.underline-effect{
+  position: relative;
+  cursor: pointer;
+
+}
+
+.underline-effect::after{
+  border: 1px solid #f2f2f2;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
+  transform: scaleX(0); 
+  transform-origin: left;
+  transition: all 0.5s; 
+}
+
+
+ .underline-effect:hover::after {
+  transform: scaleX(1);
+}
+
+/* underline effect ends */
+
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left-heading {
+   
+  opacity: 0;
+  animation: slideLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right-heading {
+   
+  opacity: 0;
+  animation: slideRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+
+/* testimonial section */
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 35s linear infinite;
+}
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Footer */
+
