@@ -3,6 +3,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home/Home'
 import GuestLayout from './layouts/GuestLayout'
+import Careers from './pages/careers/Careers'
 
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
                   element : <Home />,
                   index : true,
                 },
+                {
+                  path : "/careers",
+                  element : <Careers />,
+                }
                
               ]
             },

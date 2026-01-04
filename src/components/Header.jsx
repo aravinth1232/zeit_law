@@ -19,7 +19,7 @@ const Header = () => {
     const goToContact = () => {
         Navigate("/");
         scrollToSection("contact", 0.1);
-        
+
     };
 
 
@@ -59,31 +59,38 @@ const Header = () => {
 
         </div>
 
+        
+        <div className='flex items-center gap-8'>
+            <Link 
+            className='text-base font-light font-primary underline-effect-header'
+            to="/careers" >
+                Careers
+            </Link>
+            <button
+                onClick={goToContact}
+                className="group cursor-pointer flex flex-row items-center gap-2 text-sm font-medium 
+                            text-siteblack border border-siteblack px-4 py-2 rounded-full 
+                            hover:bg-siteblack hover:text-sitewhite transition-all duration-300"
+                >
+                <h1 className="text-base">Let's Talk</h1>
 
-        <button
-            onClick={goToContact}
-            className="group cursor-pointer flex flex-row items-center gap-2 text-sm font-medium 
-                        text-siteblack border border-siteblack px-4 py-2 rounded-full 
-                        hover:bg-siteblack hover:text-sitewhite transition-all duration-300"
-            >
-            <h1 className="text-base">Let's Talk</h1>
+                <span className="relative w-6 h-6 overflow-hidden">
+                    {/* First Arrow */}
+                    <ArrowUpRightIcon
+                    className="absolute inset-0 w-6 h-6 
+                                transition-all duration-300 
+                                group-hover:-translate-y-4 group-hover:opacity-0"
+                    />
 
-            <span className="relative w-6 h-6 overflow-hidden">
-                {/* First Arrow */}
-                <ArrowUpRightIcon
-                className="absolute inset-0 w-6 h-6 
-                            transition-all duration-300 
-                            group-hover:-translate-y-4 group-hover:opacity-0"
-                />
-
-                {/* Second Arrow */}
-                <ArrowUpRightIcon
-                className="absolute inset-0 w-6 h-6 opacity-0 translate-y-4
-                            transition-all duration-300 
-                            group-hover:translate-y-0 group-hover:opacity-100"
-                />
-            </span>
-        </button>
+                    {/* Second Arrow */}
+                    <ArrowUpRightIcon
+                    className="absolute inset-0 w-6 h-6 opacity-0 translate-y-4
+                                transition-all duration-300 
+                                group-hover:translate-y-0 group-hover:opacity-100"
+                    />
+                </span>
+            </button>
+        </div>
     </header>
   )
 }

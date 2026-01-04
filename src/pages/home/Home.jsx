@@ -8,6 +8,7 @@ import Contact from './Contact'
 import useInView from '../../hooks/useInView'
 import {useNavigate} from 'react-router-dom'
 import { scrollToSection } from "../../utils/scrollToSection";
+import Footer from '../../components/Footer'
 
 const Home = () => {
 

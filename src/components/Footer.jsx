@@ -1,5 +1,7 @@
 import React from 'react'
 import { Linkedin, Instagram, Facebook } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
+
 const Footer = () => {
 
 
@@ -10,8 +12,13 @@ const Footer = () => {
   ];
 
 
+   const {pathname} = useLocation();
+
+
   return (
-    <div className='px-12 py-4 bg-siteblack text-white flex flex-row justify-between items-center'>
+    <div className={`
+     ${pathname != "/"  ? "hidden "  : "flex"}
+    px-12 py-4 bg-siteblack text-white flex flex-row justify-between items-center`}>
       <div>
         <h1 className='text-lg font-light font-primary'>MVS & Co</h1>
         <p className='text-sm font-light font-primary'> &copy; 2025 All Rights Reserved.</p>

@@ -41,13 +41,7 @@ const Testimonial = () => {
     feedback:
       "Clear communication and strong representation. I highly recommend MVS & Co for anyone seeking trusted legal support.",
   },
-];
-
-
-
-
-
-
+    ];
 
 
 
@@ -87,7 +81,7 @@ const Testimonial = () => {
 
         <div className="
         absolute inset-0 rounded-lg z-40
-        bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,0.3),transparent_50%)]
+        bg-[radial-gradient(ellipse_at_top_right,rgba(0,0,0,0.3),transparent_50%)]
       "></div>
       
     </div>
