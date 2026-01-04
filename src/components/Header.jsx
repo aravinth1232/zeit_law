@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import logo from '../assets/logo/logo.svg'
 import {ArrowUpRightIcon } from 'lucide-react'
+import { scrollToSection } from "../utils/scrollToSection";
 
 const Header = () => {
 
@@ -15,19 +16,16 @@ const Header = () => {
         })
     }, [])
 
-    const goToContact = ()=>{
+    const goToContact = () => {
         Navigate("/");
-        const contactElement = document.getElementById('contact');
-        if (contactElement) {
-            contactElement.scrollIntoView({ behavior: 'smooth' });
-        }
+        scrollToSection("contact", 0.1);
+        
+    };
 
-
-    }
 
 
   return (
-    <header className={`px-12 sticky top-0 z-60 bg-sitewhite flex flex-row justify-between items-center py-6 
+    <header className={`px-12 sticky top-0 z-60 bg-sitewhite flex flex-row justify-between items-center py-4 
     ${isScrolled ? "shadow-md" : ""}
     `}>
 

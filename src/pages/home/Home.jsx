@@ -7,6 +7,7 @@ import Testimonial from './Testimonial'
 import Contact from './Contact'
 import useInView from '../../hooks/useInView'
 import {useNavigate} from 'react-router-dom'
+import { scrollToSection } from "../../utils/scrollToSection";
 
 const Home = () => {
 
@@ -25,10 +26,7 @@ const Home = () => {
 
   const goToServices = () =>{
     Navigate("/");
-    const servicesElement = document.getElementById('services');
-    if (servicesElement) {
-        servicesElement.scrollIntoView({ behavior: 'smooth' });
-    }
+   scrollToSection("services", 0.1);
   }
 
   return (
@@ -39,7 +37,7 @@ const Home = () => {
     className='py-8 flex flex-col items-center justify-center font-primary gap-10 '>
 
            <div className="
-        absolute inset-0 rounded-lg z-40
+        absolute inset-0 rounded-lg z-20
         bg-[radial-gradient(ellipse_at_top_center,rgba(0,0,0,0.6),transparent_20%)]
       "></div>
 
@@ -63,7 +61,7 @@ const Home = () => {
 
 
           {/* card 1  */}
-          <div className={`relative w-full h-[500px] overflow-hidden rounded-lg cursor-pointer group ${inView ? 'animate-slide-up-heading delay-3' : ''}
+          <div className={`relative z-40 w-full h-[500px] overflow-hidden rounded-lg cursor-pointer group ${inView ? 'animate-slide-up-heading delay-3' : ''}
           
           `}>
               <img src="/assets/hero/hero-image.jpg" alt="hero1" className='w-full h-full object-cover group-hover:scale-110 transition-all duration-300' />
@@ -96,7 +94,7 @@ const Home = () => {
 
           {/* card 2 */}
 
-          <div className={`relative w-full h-[500px] overflow-hidden rounded-lg cursor-pointer group ${inView ? 'animate-slide-up-heading delay-4' : ''}
+          <div className={`relative z-40 w-full h-[500px] overflow-hidden rounded-lg cursor-pointer group ${inView ? 'animate-slide-up-heading delay-4' : ''}
           
           `}>
               <img src="/assets/hero/hero-image2.jpg" alt="hero2" className='w-full h-full object-cover group-hover:scale-110 transition-all duration-300' />
@@ -145,7 +143,7 @@ const Home = () => {
     
 
     <Testimonial />
-    <Contact />
+      <Contact />
     </>
     
   )
